@@ -34,13 +34,15 @@ class Queue_A{
         if(start == -1){
             System.out.println("Queue is already empty .....");
         }
+        int z = arr[start];
         if(currSize == 1){
             start = -1;
             end = -1;
         }
-        int z = arr[start];
+        else
+            start = (start +1)%size;
+
         System.out.println(z+" element is popped");
-        start = (start +1)%size;
         currSize--;
         return z;
     }
