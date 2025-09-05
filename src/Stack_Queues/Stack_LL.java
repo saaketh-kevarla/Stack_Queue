@@ -35,6 +35,10 @@ class stack{
     }
 
     public int top(){
+        if(currSize == 0){
+            System.out.println("Stack is empty...");
+            System.exit(1);
+        }
         return head.a;
     }
 }
@@ -55,6 +59,12 @@ public class Stack_LL {
         stack.push(3);
         System.out.println(stack.pop());
         System.out.println(stack.top());
+        stack.push(4);
+        System.out.println(stack.top());
+        stack.pop();
+        System.out.println(stack.top());
+        stack.pop();
+        stack.pop();
 
     }
 }
